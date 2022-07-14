@@ -45,6 +45,10 @@ canvas{
     transition: transform ease-in-out .3s;
 }
 
+.clicked{
+    border: 5px solid black;
+}
+
 .color-option:hover{
     transform: scale(1.2);
 }

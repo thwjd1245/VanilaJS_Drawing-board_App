@@ -52,9 +52,20 @@ function onColorChange(event){
 
 function onColorClick(event){
     const colorValue = event.target.dataset.color;
+    console.dir(event.target);
     ctx.strokeStyle = colorValue;
     ctx.fillStyle = colorValue;
     color.value = colorValue;
+    event.target.Classlist = "clicked"
+    if (event.target.classList[1] === "clicked") {
+        event.target.classList.remove("clicked");
+      } 
+    else {
+        for (var i = 0; i < colorOptions.length; i++) {
+            colorOptions[i].classList.remove("clicked");
+        }
+        event.target.classList.add("clicked");
+    }
 }
 
 function onModeClick(){
