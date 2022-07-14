@@ -8,11 +8,8 @@
     <title>Drawing-board</title>
 </head>
 <body>
-    <canvas></canvas>
-    <!-- 펜 크기 설정 -->
-    <input id="line-width" type="range" min="1" max="10" value="5" step="0.1" />
     <!-- 선택 색상 -->
-    <div>
+    <div class="color-options">
         <input type="color" id="color" />
         <div 
             class="color-option" 
@@ -75,12 +72,36 @@
             data-color="#e67e22">
         </div>
     </div>
-    <!-- 전체 색 칠하기 -->
-    <button id="mode-btn">Fill</button>
-    <!-- 전체 지우개 -->
-    <button id="destroy-btn">Destroy</button>
-    <!-- 지우개 -->
-    <button id="eraser-btn">Eraser</button> 
+
+    <canvas></canvas>
+
+    <div class="btns">
+        <!-- 펜 크기 설정 -->
+        <span>Pencil Width</span>
+        <input 
+            id="line-width" 
+            type="range" 
+            min="1" 
+            max="10" 
+            value="5" 
+            step="0.1" 
+        />
+    
+        <!-- 전체 색 칠하기 -->
+        <button id="mode-btn">✒️Fill</button>
+        <!-- 전체 지우개 -->
+        <button id="destroy-btn">💣Destroy</button>
+        <!-- 지우개 -->
+        <button id="eraser-btn">❌Eraser</button> 
+        <!-- 이미지 열기 -->
+        <label for="file">
+            ➕Add photo
+        <input type="file" accept="image/*" id="file" /> </label>
+        <!-- 글자 입력 -->
+        <input type="text" placeholder="Add text here..." id="text" />
+        <!-- 그림 저장 -->
+        <button id="save">📥save image</button>
+    </div>
 
     <!-- 스크립트 연결 -->
     <script src="app.js"></script>
