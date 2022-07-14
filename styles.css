@@ -87,6 +87,13 @@ input#text{
     background-color: white;
 }
 
+.drop-btn1,
+.drop-btn2{
+    width: 80px;
+    display: grid;
+    grid-template : "drop-btn1 drop-btn2";
+}
+
 span{
     font-size: 12px;
 }
